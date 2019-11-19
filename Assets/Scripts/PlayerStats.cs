@@ -10,9 +10,13 @@ public class PlayerStats : MonoBehaviour
     public static int health;
     public int startHealth = 100;
 
+    public static int xp;
+    public int startXp = 0;
+
     void Start()
     {
         money = startMoney;
         health = startHealth;
+        xp = startXp;
     }
 }
