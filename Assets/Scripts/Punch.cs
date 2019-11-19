@@ -45,8 +45,9 @@ public class Punch : MonoBehaviour
     IEnumerator DisableUpdatePosition()
     {
         yield return new WaitForSeconds(2f);
-
-        _enemy.collider.gameObject.GetComponent<AICharacterControl>().agent.updatePosition = true;
+        Vector3 pos = _enemy.transform.position;
+       _enemy.collider.gameObject.GetComponent<AICharacterControl>().agent.updatePosition = true;
+        _enemy.transform.position = pos;
     }
 
 
