@@ -514,10 +514,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CameraTarget: {fileID: 1916810669}
+  x: 0
+  y: 0
+  mouseXSpeedMod: 5
+  mouseYSpeedMod: 5
   MaxViewDistance: 15
   MinViewDistance: 1
   ZoomRate: 20
+  lerpRate: 5
+  distance: 3
+  desireDistance: 0
+  correctedDistance: 0
+  currentDistance: 0
   cameraTargetHeight: 1
+  click: 0
+  curDist: 0
 --- !u!114 &534669907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -531,6 +542,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 1916810669}
+  _cameraOffset: {x: 0, y: 0, z: 0}
   smoothFactor: 0.193
   lookAtPlayer: 0
   rotateAroundPlayer: 1
@@ -555,12 +567,6 @@ MonoBehaviour:
   yMaxLimit: 80
   distanceMin: 3
   distanceMax: 10
---- !u!1 &1037063962 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 113348, guid: 54eb5844754051b40a918a84c33b7c1a,
-    type: 3}
-  m_PrefabInstance: {fileID: 1692018080}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1329907744
 GameObject:
   m_ObjectHideFlags: 0
@@ -809,6 +815,49 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54eb5844754051b40a918a84c33b7c1a, type: 3}
+--- !u!1 &1861413484
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1861413485}
+  - component: {fileID: 1861413486}
+  m_Layer: 0
+  m_Name: GameMaster
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1861413485
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1861413484}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.2561774, y: 4.372462, z: 15.634347}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1861413486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1861413484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cdc33244fc95904a882b335b5402d81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1916810663 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 149790, guid: 7737647c22c1fc64a88d5cd030c352ce,
@@ -833,6 +882,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6a99755ad91c56499b1f846a70d811d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thrust: 5
+  thrust: 20
   hand: {fileID: 1329907744}
-  enemy: {fileID: 1037063962}
