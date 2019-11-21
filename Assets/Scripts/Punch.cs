@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityStandardAssets.Characters.ThirdPerson;
+using UnityEngine.AI;
 
 public class Punch : MonoBehaviour
 {
@@ -9,8 +10,10 @@ public class Punch : MonoBehaviour
     public float thrust;
 
     public GameObject hand;
+    private NavMeshAgent agent;
 
     private RaycastHit _enemy;
+    Vector3 enemyPos;
 
     void Update()
     {
@@ -28,12 +31,15 @@ public class Punch : MonoBehaviour
             {
                 _enemy = hit;
                 Vector3 dir = hit.transform.position - transform.position;
-
+                agent = hit.collider.gameObject.GetComponent<NavMeshAgent>();
                 Debug.Log("Hit Enemy");
 
                 hit.collider.gameObject.GetComponent<AICharacterControl>().agent.updatePosition = false;
                 hit.rigidbody.AddForce(dir.normalized * thrust, ForceMode.Impulse);
+                enemyPos = agent.transform.position;
+
                 _nextHitTime = Time.time + _coolDown;
+                agent.Warp(enemyPos);
 
                 StartCoroutine("DisableUpdatePosition");
 
@@ -44,10 +50,11 @@ public class Punch : MonoBehaviour
 
     IEnumerator DisableUpdatePosition()
     {
-        yield return new WaitForSeconds(2f);
-        Vector3 pos = _enemy.transform.position;
-       _enemy.collider.gameObject.GetComponent<AICharacterControl>().agent.updatePosition = true;
-        _enemy.transform.position = pos;
+        
+        yield return new WaitForSeconds(1f);
+        
+        _enemy.collider.gameObject.GetComponent<AICharacterControl>().agent.updatePosition = true;
+        
     }
 
 
