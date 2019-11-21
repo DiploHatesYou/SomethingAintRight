@@ -18,6 +18,7 @@ public class Punch : MonoBehaviour
     void Update()
     {
         Hit();
+        //enemyPos = agent.transform.position;
     }
 
     void Hit()
@@ -29,6 +30,7 @@ public class Punch : MonoBehaviour
 
             if (Physics.Raycast(hand.transform.position, fwd, out RaycastHit hit, 2) && hit.collider.CompareTag("Enemy"))
             {
+
                 _enemy = hit;
                 Vector3 dir = hit.transform.position - transform.position;
                 agent = hit.collider.gameObject.GetComponent<NavMeshAgent>();
@@ -36,7 +38,6 @@ public class Punch : MonoBehaviour
 
                 hit.collider.gameObject.GetComponent<AICharacterControl>().agent.updatePosition = false;
                 hit.rigidbody.AddForce(dir.normalized * thrust, ForceMode.Impulse);
-                enemyPos = agent.transform.position;
 
                 _nextHitTime = Time.time + _coolDown;
                 agent.Warp(enemyPos);
@@ -53,7 +54,7 @@ public class Punch : MonoBehaviour
         
         yield return new WaitForSeconds(1f);
         
-        _enemy.collider.gameObject.GetComponent<AICharacterControl>().agent.updatePosition = true;
+        agent.GetComponent<AICharacterControl>().agent.updatePosition = true;
         
     }
 
