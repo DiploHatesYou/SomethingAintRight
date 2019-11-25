@@ -13,7 +13,7 @@ public class Punch : MonoBehaviour
     private NavMeshAgent agent;
 
     private RaycastHit _enemy;
-    Vector3 enemyPos;
+    
 
     void Update()
     {
@@ -23,7 +23,7 @@ public class Punch : MonoBehaviour
 
     void Hit()
     {
-        if (Time.time >= _nextHitTime && Input.GetMouseButtonDown(0))
+        if (/*Time.time >= _nextHitTime &&*/ Input.GetMouseButtonDown(0))
         {
             Vector3 fwd = hand.transform.TransformDirection(Vector3.forward);
             Debug.DrawRay(hand.transform.position, fwd);
@@ -39,10 +39,20 @@ public class Punch : MonoBehaviour
                 hit.collider.gameObject.GetComponent<AICharacterControl>().agent.updatePosition = false;
                 hit.rigidbody.AddForce(dir.normalized * thrust, ForceMode.Impulse);
 
-                _nextHitTime = Time.time + _coolDown;
-                agent.Warp(enemyPos);
+                //_nextHitTime = Time.time + _coolDown;
 
-                StartCoroutine("DisableUpdatePosition");
+                if (Mathf.Approximately(hit.rigidbody.velocity.z, 0) || Mathf.Approximately(hit.rigidbody.velocity.x, 0) || Mathf.Approximately(hit.rigidbody.velocity.y, 0))
+                {
+                    Debug.Log("Velocity is 0");
+                    Vector3 enemyPos = hit.transform.position;
+                    //enemyPos = hit.collider.gameObject.GetComponent<Transform>()
+                    agent.Warp(enemyPos);
+                    StartCoroutine("DisableUpdatePosition");
+                    //agent.GetComponent<AICharacterControl>().agent.updatePosition = true;
+                }
+                
+
+                
 
             }
 
@@ -51,11 +61,11 @@ public class Punch : MonoBehaviour
 
     IEnumerator DisableUpdatePosition()
     {
-        
-        yield return new WaitForSeconds(1f);
-        
+
+        yield return new WaitForSeconds(.25f);
+
         agent.GetComponent<AICharacterControl>().agent.updatePosition = true;
-        
+
     }
 
 

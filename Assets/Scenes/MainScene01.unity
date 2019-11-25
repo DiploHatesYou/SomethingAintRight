@@ -2467,5 +2467,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6a99755ad91c56499b1f846a70d811d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thrust: 60
+  thrust: 80
   hand: {fileID: 1329907744}
