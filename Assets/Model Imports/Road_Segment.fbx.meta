@@ -500,6 +500,101 @@ ModelImporter:
     4300184: White_Broken_Line_17
     4300186: Street_38_2
     4300188: Street_39_2
+    6400000: CrossWalk
+    6400002: CrossWalk_1
+    6400004: CrossWalk_10
+    6400006: CrossWalk_11
+    6400008: CrossWalk_12
+    6400010: CrossWalk_13
+    6400012: CrossWalk_14
+    6400014: CrossWalk_15
+    6400016: CrossWalk_2
+    6400018: CrossWalk_3
+    6400020: CrossWalk_4
+    6400022: CrossWalk_5
+    6400024: CrossWalk_6
+    6400026: CrossWalk_7
+    6400028: CrossWalk_8
+    6400030: CrossWalk_9
+    6400032: Half_Street
+    6400034: Half_Street_1
+    6400036: Half_Street_18
+    6400038: Half_Street_19
+    6400040: Half_Street_3
+    6400042: Half_Street_4
+    6400044: Half_Street_5
+    6400046: Half_Street_6
+    6400048: Half_Street_Other_Direction
+    6400050: Half_Street_Other_Direction_44
+    6400052: Half_Street_Other_Direction_45
+    6400054: Half_Street_Other_Direction_46
+    6400056: Half_Street_Other_Direction_47
+    6400058: Half_Street_Other_Direction_48
+    6400060: Qaurter_Street_1
+    6400062: Side_Walk_Corner
+    6400064: Side_Walk_Corner_1
+    6400066: Side_Walk_Corner_2
+    6400068: Side_Walk_Corner_3
+    6400070: Side_Walk_Straight
+    6400072: Side_Walk_Straight_1
+    6400074: Side_Walk_Straight_2
+    6400076: Side_Walk_Straight_3
+    6400078: Street_1
+    6400080: Street_10
+    6400082: Street_11
+    6400084: Street_176
+    6400086: Street_177
+    6400088: Street_178
+    6400090: Street_179
+    6400092: Street_180
+    6400094: Street_181
+    6400096: Street_182
+    6400098: Street_183
+    6400100: Street_184
+    6400102: Street_185
+    6400104: Street_186
+    6400106: Street_187
+    6400108: Street_188
+    6400110: Street_189
+    6400112: Street_190
+    6400114: Street_191
+    6400116: Street_192
+    6400118: Street_193
+    6400120: Street_194
+    6400122: Street_195
+    6400124: Street_2
+    6400126: Street_2_2
+    6400128: Street_3
+    6400130: Street_36
+    6400132: Street_36_2
+    6400134: Street_37
+    6400136: Street_37_2
+    6400138: Street_38
+    6400140: Street_38_2
+    6400142: Street_39
+    6400144: Street_39_2
+    6400146: Street_4
+    6400148: Street_5
+    6400150: Street_6
+    6400152: Street_7
+    6400154: Street_8
+    6400156: Street_9
+    6400158: White_Broken_Line
+    6400160: White_Broken_Line_17
+    6400162: White_Full_Line
+    6400164: White_Full_Line_1
+    6400166: Yellow_Line
+    6400168: Yellow_Line_1
+    6400170: Yellow_Line_2
+    6400172: Yellow_Line_23
+    6400174: Yellow_Line_3
+    6400176: Yellow_Line_37
+    6400178: Yellow_Line_38
+    6400180: Yellow_Line_39
+    6400182: Yellow_Line_4
+    6400184: Yellow_Line_5
+    6400186: Yellow_Line_6
+    6400188: Yellow_Line_7
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -533,7 +628,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     useSRGBMaterialColor: 1
     importVisibility: 1
     importBlendShapes: 1

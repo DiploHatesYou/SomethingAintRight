@@ -52,7 +52,7 @@ public class Punch : MonoBehaviour
                     agent.GetComponent<AICharacterControl>().agent.updateRotation = true;
                     //StartCoroutine("DisableUpdatePosition");
                 }
-                else if (Time.time>= _nextHitTime)
+                else if (Time.time >= _nextHitTime)
                 {
                     agent.GetComponent<AICharacterControl>().agent.updatePosition = true;
                     agent.GetComponent<AICharacterControl>().agent.updateRotation = true;
