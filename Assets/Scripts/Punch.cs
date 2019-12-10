@@ -8,15 +8,17 @@ public class Punch : MonoBehaviour
     float _coolDown = 1;
     float _nextHitTime = 0;
     public float thrust;
+    private bool punching = false;
 
     bool enemyHit = false;
 
     public GameObject hand;
     private NavMeshAgent agent;
+    private Animator anim;
 
-    void Update()
+    private void Start()
     {
-        
+        anim = GetComponent<Animator>();
     }
 
     private void FixedUpdate()
@@ -26,17 +28,17 @@ public class Punch : MonoBehaviour
 
     void Hit()
     {
-        if (Time.time >= _nextHitTime && Input.GetMouseButtonDown(0))
+        if (Time.time >= _nextHitTime && Input.GetMouseButtonDown(0) && punching == false)
         {
             Vector3 fwd = hand.transform.TransformDirection(Vector3.forward);
             Debug.DrawRay(hand.transform.position, fwd);
+            punching = true;
 
             if (Physics.Raycast(hand.transform.position, fwd, out RaycastHit hit, 2) && hit.collider.CompareTag("Enemy"))
             {
                 Vector3 dir = hit.transform.position - transform.position;
                 agent = hit.collider.gameObject.GetComponent<NavMeshAgent>();
                 Debug.Log("Hit Enemy");
-
                 hit.collider.gameObject.GetComponent<AICharacterControl>().agent.updatePosition = false;
                 hit.collider.gameObject.GetComponent<AICharacterControl>().agent.updateRotation = false;
                 hit.rigidbody.AddForce(dir.normalized * thrust, ForceMode.Impulse);
@@ -58,6 +60,21 @@ public class Punch : MonoBehaviour
                     agent.GetComponent<AICharacterControl>().agent.updateRotation = true;
                 }
             }
+
+        }
+        else
+        {
+            punching = false;
+        }
+
+        if (punching == false)
+        {
+            anim.SetBool("PunchingRight", false);
+        }
+
+        if (punching == true)
+        {
+            anim.SetBool("PunchingRight", true);
         }
     }
 

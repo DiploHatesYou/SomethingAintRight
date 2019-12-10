@@ -4888,7 +4888,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 408730, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.2536118
+      value: -2.033
       objectReference: {fileID: 0}
     - target: {fileID: 408730, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4896,7 +4896,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 408730, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.0752203
+      value: 0.139
       objectReference: {fileID: 0}
     - target: {fileID: 408730, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 3}
       propertyPath: m_LocalRotation.x
@@ -5043,7 +5043,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 102336115}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.12, y: 0.21, z: 7.14}
+  m_LocalPosition: {x: 1.86, y: 1.01, z: 1.226}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5239,7 +5239,7 @@ PrefabInstance:
     - target: {fileID: 2402889664568427908, guid: 600d269c0534c154b9cf818d6b3100b1,
         type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 2402889664568427908, guid: 600d269c0534c154b9cf818d6b3100b1,
         type: 3}
@@ -15152,6 +15152,7 @@ GameObject:
   - component: {fileID: 800590426}
   - component: {fileID: 800590425}
   - component: {fileID: 800590424}
+  - component: {fileID: 800590427}
   m_Layer: 0
   m_Name: Rain
   m_TagString: Untagged
@@ -19838,11 +19839,23 @@ Transform:
   m_Children:
   - {fileID: 922684640}
   - {fileID: 987089400}
-  - {fileID: 1930768985}
   - {fileID: 880076432}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &800590427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 800590423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b824dd667f14caf498d9b142489fed56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1916810669}
 --- !u!1 &820516832 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 113348, guid: 54eb5844754051b40a918a84c33b7c1a,
@@ -19886,7 +19899,7 @@ GameObject:
   - component: {fileID: 880076434}
   - component: {fileID: 880076433}
   m_Layer: 0
-  m_Name: Particle System
+  m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19899,12 +19912,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 880076431}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -10, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 800590426}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!199 &880076433
 ParticleSystemRenderer:
@@ -34734,7 +34747,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 436670, guid: 54eb5844754051b40a918a84c33b7c1a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.843278e-18
+      value: 0.14
       objectReference: {fileID: 0}
     - target: {fileID: 436670, guid: 54eb5844754051b40a918a84c33b7c1a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -34974,8 +34987,9 @@ GameObject:
   - component: {fileID: 1930768985}
   - component: {fileID: 1930768987}
   - component: {fileID: 1930768986}
+  - component: {fileID: 1930768988}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: RipplePlane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34988,15 +35002,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1930768984}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -10, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.3, y: 0, z: 1.9000001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 249007935}
   - {fileID: 59321599}
   - {fileID: 278320498}
-  m_Father: {fileID: 800590426}
-  m_RootOrder: 2
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!199 &1930768986
 ParticleSystemRenderer:
@@ -39664,6 +39678,20 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!114 &1930768988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930768984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 832b13d0e54ddf442996de11441a4668, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1916810669}
+  rainRipples: {fileID: 1930768984}
 --- !u!64 &1948522044
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -40695,6 +40723,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 289596218364557217}
     m_Modifications:
+    - target: {fileID: 4688759615308655159, guid: 8fb27bb79bad93442b862395bd283dc1,
+        type: 3}
+      propertyPath: m_Name
+      value: Base
+      objectReference: {fileID: 0}
     - target: {fileID: 4688759615308756503, guid: 8fb27bb79bad93442b862395bd283dc1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -40749,11 +40782,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4688759615308655159, guid: 8fb27bb79bad93442b862395bd283dc1,
-        type: 3}
-      propertyPath: m_Name
-      value: Base
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8fb27bb79bad93442b862395bd283dc1, type: 3}
