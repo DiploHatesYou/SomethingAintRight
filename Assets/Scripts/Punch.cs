@@ -110,7 +110,6 @@ public class Punch : MonoBehaviour
 
             _enemyAnim.SetBool("BeenHit", true);
             Instantiate(bloodSplatter, new Vector3(bloodSplatterLocation.position.x, bloodSplatterLocation.position.y, bloodSplatterLocation.position.z), Quaternion.identity);
-            
     }
 
     void DoubleClick()

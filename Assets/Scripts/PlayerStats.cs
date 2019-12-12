@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -11,10 +12,29 @@ public class PlayerStats : MonoBehaviour
     public static int xp;
     public int startXp = 0;
 
+    Animator _anim;
+
     void Start()
     {
         money = startMoney;
         health = startHealth;
         xp = startXp;
+        _anim = GetComponent<Animator>();
+    }
+
+    public void TakeDamage(float amount)
+    {
+        health -= amount;
+
+        if (health <= 0)
+        {
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        _anim.SetBool("Death", true);
+        //SceneManager.LoadScene()
     }
 }
