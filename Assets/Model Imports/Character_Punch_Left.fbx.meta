@@ -59,8 +59,8 @@ ModelImporter:
     400052: mixamorig_Spine2
     2100000: Character
     4300000: Character
-    7400000: PunchLeft
-    7400002: mixamo.com
+    7400000: Tpose
+    7400002: LeftPunch
     9500000: //RootNode
     13700000: Character
     2186277476908879412: ImportLogs
@@ -93,7 +93,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: PunchLeft
+      name: Tpose
       takeName: CINEMA_4D_Main
       firstFrame: 0
       lastFrame: 51
@@ -121,7 +121,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: mixamo.com
+      name: LeftPunch
       takeName: mixamo.com
       firstFrame: 0
       lastFrame: 51

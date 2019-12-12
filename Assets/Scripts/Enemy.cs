@@ -1,6 +1,7 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
+using UnityStandardAssets.Characters.ThirdPerson;
 
 public class Enemy : MonoBehaviour
 {
@@ -8,10 +9,14 @@ public class Enemy : MonoBehaviour
 
     public int worth = 50;
 
+    private Animator _anim;
+    private AICharacterControl _agent;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        _anim = GetComponent<Animator>();
+        _agent = GetComponent<AICharacterControl>();
     }
 
     public void TakeDamage(float amount)
@@ -26,11 +31,10 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
+        _agent.GetComponent<AICharacterControl>().agent.updatePosition = false;
+        _agent.GetComponent<AICharacterControl>().agent.updateRotation = false;
         PlayerStats.money += worth;
-
-        //GameObject effect = (GameObject)Instantiate(deathEffect, transform.position, Quaternion.identity);
-        //Destroy(effect, 5f);
-
-        Destroy(gameObject);
+        _anim.SetBool("Death", true);
+        Destroy(gameObject, 10f);
     }
 }
