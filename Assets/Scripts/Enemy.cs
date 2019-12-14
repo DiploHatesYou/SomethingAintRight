@@ -50,7 +50,7 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && Punch.beenHit == false)
         {
             _attack = true;
             _doublePunch = true;

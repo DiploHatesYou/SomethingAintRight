@@ -19,6 +19,8 @@ public class Punch : MonoBehaviour
     bool _punching = false;
     bool _doublePunch = false;
 
+    public static bool beenHit = false;
+
     public GameObject rayCaster;
 
     //private NavMeshAgent _agent;
@@ -86,11 +88,16 @@ public class Punch : MonoBehaviour
            {
                 if (hit.collider.CompareTag("Enemy") && Time.time > _nextHitTime && _oneClick == false)
                 {
+                    beenHit = true;
                     Debug.Log("One Punch");
                     StartCoroutine(HitReaction());
                     _nextHitTime = Time.time + _coolDown;
                     _enemyAnim = hit.collider.GetComponent<Animator>();
                     Enemy.TakeDamage(onePunchDamage);
+                }
+                else
+                {
+                    beenHit = false;
                 }
 
                 //if (hit.collider.CompareTag("Enemy") && Time.time > _nextHitTime && _doublePunch == true)
