@@ -1,0 +1,317 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+<<<<<<< HEAD:Assets/Prefabs/Traffic_Cone_V2.prefab
+--- !u!1 &9173259713384672384
+=======
+--- !u!1 &1505623469630428020
+>>>>>>> master:Assets/Prefabs/Traffic_Cone_1.00.prefab
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+<<<<<<< HEAD:Assets/Prefabs/Traffic_Cone_V2.prefab
+  - component: {fileID: 9173259713384968352}
+  - component: {fileID: 9173259713381544064}
+  - component: {fileID: 9173259713382675008}
+  - component: {fileID: 9173259713386758688}
+=======
+  - component: {fileID: 1505623469630918484}
+  - component: {fileID: 1505623469631721332}
+  - component: {fileID: 1505623469632687540}
+>>>>>>> master:Assets/Prefabs/Traffic_Cone_1.00.prefab
+  m_Layer: 0
+  m_Name: Cube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+<<<<<<< HEAD:Assets/Prefabs/Traffic_Cone_V2.prefab
+--- !u!4 &9173259713384968352
+=======
+--- !u!4 &1505623469630918484
+>>>>>>> master:Assets/Prefabs/Traffic_Cone_1.00.prefab
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Prefabs/Traffic_Cone_V2.prefab
+  m_GameObject: {fileID: 9173259713384672384}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: -0.20404457, z: 0}
+  m_LocalScale: {x: 0.0025, y: 0.87427944, z: 0.0025}
+  m_Children: []
+  m_Father: {fileID: 9173259713384968358}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &9173259713381544064
+=======
+  m_GameObject: {fileID: 1505623469630428020}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -0, y: -0.1488907, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1505623469630918486}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &1505623469631721332
+>>>>>>> master:Assets/Prefabs/Traffic_Cone_1.00.prefab
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Prefabs/Traffic_Cone_V2.prefab
+  m_GameObject: {fileID: 9173259713384672384}
+  m_Mesh: {fileID: 4300000, guid: eead73b1d9d69e946b32ca5bd7f52e02, type: 3}
+--- !u!23 &9173259713382675008
+=======
+  m_GameObject: {fileID: 1505623469630428020}
+  m_Mesh: {fileID: 4300002, guid: f0c01b1e4bfcc194aa1acccc60f89074, type: 3}
+--- !u!23 &1505623469632687540
+>>>>>>> master:Assets/Prefabs/Traffic_Cone_1.00.prefab
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Prefabs/Traffic_Cone_V2.prefab
+  m_GameObject: {fileID: 9173259713384672384}
+=======
+  m_GameObject: {fileID: 1505623469630428020}
+>>>>>>> master:Assets/Prefabs/Traffic_Cone_1.00.prefab
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+<<<<<<< HEAD:Assets/Prefabs/Traffic_Cone_V2.prefab
+  - {fileID: 2100000, guid: eead73b1d9d69e946b32ca5bd7f52e02, type: 3}
+=======
+  - {fileID: 2100000, guid: f6122b8d1d86056428df151adf9f4021, type: 2}
+>>>>>>> master:Assets/Prefabs/Traffic_Cone_1.00.prefab
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+<<<<<<< HEAD:Assets/Prefabs/Traffic_Cone_V2.prefab
+--- !u!64 &9173259713386758688
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9173259713384672384}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: eead73b1d9d69e946b32ca5bd7f52e02, type: 3}
+--- !u!1 &9173259713384672386
+=======
+--- !u!1 &1505623469630428022
+>>>>>>> master:Assets/Prefabs/Traffic_Cone_1.00.prefab
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+<<<<<<< HEAD:Assets/Prefabs/Traffic_Cone_V2.prefab
+  - component: {fileID: 9173259713384968354}
+  - component: {fileID: 9173259713381544066}
+  - component: {fileID: 9173259713382675010}
+  - component: {fileID: 9173259713386758690}
+  m_Layer: 0
+  m_Name: Cone
+=======
+  - component: {fileID: 1505623469630918486}
+  - component: {fileID: 1505623469631721334}
+  - component: {fileID: 1505623469632687542}
+  - component: {fileID: 6672189907713409048}
+  m_Layer: 0
+  m_Name: Traffic_Cone_1.00 1
+>>>>>>> master:Assets/Prefabs/Traffic_Cone_1.00.prefab
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+<<<<<<< HEAD:Assets/Prefabs/Traffic_Cone_V2.prefab
+--- !u!4 &9173259713384968354
+=======
+--- !u!4 &1505623469630918486
+>>>>>>> master:Assets/Prefabs/Traffic_Cone_1.00.prefab
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Prefabs/Traffic_Cone_V2.prefab
+  m_GameObject: {fileID: 9173259713384672386}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 9173259713384968358}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &9173259713381544066
+=======
+  m_GameObject: {fileID: 1505623469630428022}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 203.10585, y: 0.467, z: -68.321556}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
+  m_Children:
+  - {fileID: 1505623469630918484}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &1505623469631721334
+>>>>>>> master:Assets/Prefabs/Traffic_Cone_1.00.prefab
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Prefabs/Traffic_Cone_V2.prefab
+  m_GameObject: {fileID: 9173259713384672386}
+  m_Mesh: {fileID: 4300002, guid: eead73b1d9d69e946b32ca5bd7f52e02, type: 3}
+--- !u!23 &9173259713382675010
+=======
+  m_GameObject: {fileID: 1505623469630428022}
+  m_Mesh: {fileID: 4300000, guid: f0c01b1e4bfcc194aa1acccc60f89074, type: 3}
+--- !u!23 &1505623469632687542
+>>>>>>> master:Assets/Prefabs/Traffic_Cone_1.00.prefab
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Prefabs/Traffic_Cone_V2.prefab
+  m_GameObject: {fileID: 9173259713384672386}
+=======
+  m_GameObject: {fileID: 1505623469630428022}
+>>>>>>> master:Assets/Prefabs/Traffic_Cone_1.00.prefab
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+<<<<<<< HEAD:Assets/Prefabs/Traffic_Cone_V2.prefab
+  - {fileID: 2100002, guid: eead73b1d9d69e946b32ca5bd7f52e02, type: 3}
+=======
+  - {fileID: 2100000, guid: 353ab886cc7b02244af89f633ac05f89, type: 2}
+>>>>>>> master:Assets/Prefabs/Traffic_Cone_1.00.prefab
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+<<<<<<< HEAD:Assets/Prefabs/Traffic_Cone_V2.prefab
+--- !u!64 &9173259713386758690
+MeshCollider:
+=======
+--- !u!65 &6672189907713409048
+BoxCollider:
+>>>>>>> master:Assets/Prefabs/Traffic_Cone_1.00.prefab
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Prefabs/Traffic_Cone_V2.prefab
+  m_GameObject: {fileID: 9173259713384672386}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300002, guid: eead73b1d9d69e946b32ca5bd7f52e02, type: 3}
+--- !u!1 &9173259713384672390
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9173259713384968358}
+  m_Layer: 0
+  m_Name: Traffic_Cone_V2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9173259713384968358
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9173259713384672390}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.5255527, y: 0.21, z: 1.87}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 9173259713384968354}
+  - {fileID: 9173259713384968352}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+  m_GameObject: {fileID: 1505623469630428022}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.14999999, y: 0.2625, z: 0.14999999}
+  m_Center: {x: 0, y: -0.018749997, z: 0}
+>>>>>>> master:Assets/Prefabs/Traffic_Cone_1.00.prefab
