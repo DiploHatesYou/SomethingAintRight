@@ -53,7 +53,7 @@ public class PlayerStats : MonoBehaviour
         {
             xp = 0;
             level++;
-            Punch.onePunchDamage = Punch.onePunchDamage + .1f;
+            Punch.onePunchDamage = Punch.onePunchDamage + .05f;
         }
     }
 }
