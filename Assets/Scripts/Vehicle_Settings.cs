@@ -5,6 +5,7 @@ using System;
 
 public class Vehicle_Settings : MonoBehaviour
 {
+	public float operationHeight;
 
 	void Start()
 	{
@@ -16,6 +17,9 @@ public class Vehicle_Settings : MonoBehaviour
 
 	}
 
-
+	public float getOperationHeight()
+	{
+		return operationHeight;
+	}
 
 }
