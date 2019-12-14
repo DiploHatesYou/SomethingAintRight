@@ -4,31 +4,21 @@ ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
-    100002: Wheels_Back_Left
-    100004: Wheels_Back_Right
-    100006: Wheels_Front_Left
-    100008: Wheels_Front_Right
+    100002: Wheels_Back
+    100004: Wheels_Front
     400000: //RootNode
-    400002: Wheels_Back_Left
-    400004: Wheels_Back_Right
-    400006: Wheels_Front_Left
-    400008: Wheels_Front_Right
+    400002: Wheels_Back
+    400004: Wheels_Front
     2100000: Mat
     2300000: //RootNode
-    2300002: Wheels_Back_Left
-    2300004: Wheels_Back_Right
-    2300006: Wheels_Front_Left
-    2300008: Wheels_Front_Right
+    2300002: Wheels_Back
+    2300004: Wheels_Front
     3300000: //RootNode
-    3300002: Wheels_Back_Left
-    3300004: Wheels_Back_Right
-    3300006: Wheels_Front_Left
-    3300008: Wheels_Front_Right
+    3300002: Wheels_Back
+    3300004: Wheels_Front
     4300000: Car
-    4300002: Wheels_Back_Right
-    4300004: Wheels_Back_Left
-    4300006: Wheels_Front_Right
-    4300008: Wheels_Front_Left
+    4300002: Wheels_Back
+    4300004: Wheels_Front
   externalObjects: {}
   materials:
     importMaterials: 1
