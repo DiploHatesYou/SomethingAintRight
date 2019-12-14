@@ -12,6 +12,10 @@ public class PlayerStats : MonoBehaviour
     public static int xp;
     public int startXp = 0;
 
+    public static int level = 0;
+
+    public GameObject player;
+
     Animator _anim;
 
     void Start()
@@ -19,7 +23,12 @@ public class PlayerStats : MonoBehaviour
         money = startMoney;
         health = startHealth;
         xp = startXp;
-        _anim = GetComponent<Animator>();
+        _anim = player.GetComponent<Animator>();
+    }
+
+    private void Update()
+    {
+        LevelUp();
     }
 
     public void TakeDamage(float amount)
@@ -35,6 +44,16 @@ public class PlayerStats : MonoBehaviour
     void Die()
     {
         _anim.SetBool("Death", true);
-        //SceneManager.LoadScene()
+        //Load death screen
+    }
+
+    void LevelUp()
+    {
+        if (xp == 100)
+        {
+            xp = 0;
+            level++;
+            Punch.onePunchDamage = Punch.onePunchDamage + .1f;
+        }
     }
 }

@@ -4,6 +4,7 @@ TextureImporter:
   fileIDToRecycleName:
     21300000: Status Bars_0
     21300002: Status Bars_1
+    21300004: Blue
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -114,13 +115,33 @@ TextureImporter:
         width: 512
         height: 55
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 99ff89dbcbaea3f46a8ddcb30c54fe07
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 455
+        width: 511
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e54600a4a3d5be54380570752a524ffa
       vertices: []
       indices: 
       edges: []

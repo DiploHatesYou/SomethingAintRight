@@ -1,12 +1,11 @@
-﻿using System.Collections;
-using UnityEngine;
-using UnityEngine.AI;
+﻿using UnityEngine;
 using UnityStandardAssets.Characters.ThirdPerson;
 
 public class Enemy : MonoBehaviour
 {
     public float health = 1f;
     public int worth = 50;
+    public int xpWorth = 25;
 
     public float damage;
 
@@ -28,6 +27,7 @@ public class Enemy : MonoBehaviour
     private void Update()
     {
         Attack();
+        DoDamage();
     }
 
     public void TakeDamage(float amount)
@@ -43,6 +43,7 @@ public class Enemy : MonoBehaviour
     void Die()
     {
         PlayerStats.money += worth;
+        PlayerStats.xp += xpWorth;
         _anim.SetBool("Death", true);
         Destroy(gameObject, 10f);
     }
@@ -53,6 +54,7 @@ public class Enemy : MonoBehaviour
         {
             _attack = true;
             _doublePunch = true;
+            DoDamage();
         }
             
     }
@@ -78,13 +80,15 @@ public class Enemy : MonoBehaviour
             _anim.SetBool("DoublePunch", false);
     }
 
-    void DoDamage()
+    public void DoDamage()
     {
-        int rand = Random.Range(0, 2000);
-
-        if (rand == 1)
+        int rand = Random.Range(0, 200);
+        if (_attack == true && Pause.gameIsPaused == false)
         {
-            PlayerStats.TakeDamage(damage);
+            if (rand == 1)
+            {
+                PlayerStats.TakeDamage(damage);
+            }
         }
     }
 }

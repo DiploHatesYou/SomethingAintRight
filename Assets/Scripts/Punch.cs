@@ -7,8 +7,8 @@ public class Punch : MonoBehaviour
     float _coolDown = 1f;
     float _nextHitTime = 0;
 
-    public float onePunchDamage = .1f;
-    public float doublePunchDamage = .2f;
+    public static float onePunchDamage = .1f;
+    public static float doublePunchDamage = .2f;
     public float thrust;
 
     bool _oneClick = false;
@@ -107,9 +107,9 @@ public class Punch : MonoBehaviour
     IEnumerator HitReaction()
     {
         yield return new WaitForSeconds(.1f);
-
-            _enemyAnim.SetBool("BeenHit", true);
-            Instantiate(bloodSplatter, new Vector3(bloodSplatterLocation.position.x, bloodSplatterLocation.position.y, bloodSplatterLocation.position.z), Quaternion.identity);
+        _enemyAnim.SetBool("BeenHit", true);
+        var PS = Instantiate(bloodSplatter, new Vector3(bloodSplatterLocation.position.x, bloodSplatterLocation.position.y, bloodSplatterLocation.position.z), Quaternion.identity);
+        Destroy(PS, 2f);
     }
 
     void DoubleClick()
