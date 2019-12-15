@@ -90,7 +90,7 @@ public class Punch : MonoBehaviour
                 {
                     beenHit = true;
                     Debug.Log("One Punch");
-                    StartCoroutine(HitReaction());
+                    //StartCoroutine(HitReaction());
                     _nextHitTime = Time.time + _coolDown;
                     _enemyAnim = hit.collider.GetComponent<Animator>();
                     Enemy.TakeDamage(onePunchDamage);
@@ -111,9 +111,11 @@ public class Punch : MonoBehaviour
         }
     }
 
-    IEnumerator HitReaction()
+    public IEnumerator HitReaction()
     {
         yield return new WaitForSeconds(.1f);
+        _enemyAnim.SetBool("PunchingRight", false);
+        _enemyAnim.SetBool("DoublePunch", false);
         _enemyAnim.SetBool("BeenHit", true);
         var PS = Instantiate(bloodSplatter, new Vector3(bloodSplatterLocation.position.x, bloodSplatterLocation.position.y, bloodSplatterLocation.position.z), Quaternion.identity);
         Destroy(PS, 2f);

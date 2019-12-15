@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityStandardAssets.Characters.ThirdPerson;
+using System.Collections;
 
 public class Enemy : MonoBehaviour
 {
@@ -11,10 +12,16 @@ public class Enemy : MonoBehaviour
 
     bool _attack = false;
     bool _doublePunch = false;
+    bool _hitReaction = false;
 
     private Animator _anim;
     private AICharacterControl _agent;
     private PlayerStats PlayerStats;
+    private Punch Punch;
+    public Collider trigger;
+
+    public GameObject bloodSplatter;
+    public Transform bloodSplatterLocation;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +29,7 @@ public class Enemy : MonoBehaviour
         _anim = GetComponent<Animator>();
         _agent = GetComponent<AICharacterControl>();
         PlayerStats = FindObjectOfType<PlayerStats>();
+        Punch = FindObjectOfType<Punch>();
     }
 
     private void Update()
@@ -35,10 +43,7 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(float amount)
     {
         health -= amount;
-
-        _anim.SetBool("PunchingRight", false);
-        _anim.SetBool("DoublePunch", false);
-        _anim.SetBool("BeenHit", true);
+        _hitReaction = true;
 
         if (health <= 0)
         {
@@ -56,13 +61,29 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        //if (other.CompareTag("Player"))
+        //{
+        //    _attack = true;
+        //    _doublePunch = true;
+        //    DoDamage();
+        //}
+        if (_hitReaction == true)
+        {
+            //_attack = false;
+            //_doublePunch = false;
+            //_anim.SetBool("BeenHit", true);
+            //var PS = Instantiate(bloodSplatter, new Vector3(bloodSplatterLocation.position.x, bloodSplatterLocation.position.y, bloodSplatterLocation.position.z), Quaternion.identity);
+            //Destroy(PS, 2f);
+            //_hitReaction = false;
+            trigger.enabled = false;
+            StartCoroutine(HitReaction());
+        }
+        else if (_hitReaction == false && other.CompareTag("Player"))
         {
             _attack = true;
             _doublePunch = true;
             DoDamage();
         }
-            
     }
 
     private void OnTriggerExit(Collider other)
@@ -96,5 +117,18 @@ public class Enemy : MonoBehaviour
                 PlayerStats.TakeDamage(damage);
             }
         }
+    }
+
+    public IEnumerator HitReaction()
+    {
+        
+        yield return new WaitForSeconds(.1f);
+        _anim.SetBool("PunchingRight", false);
+        _anim.SetBool("DoublePunch", false);
+        _anim.SetBool("BeenHit", true);
+        var PS = Instantiate(bloodSplatter, new Vector3(bloodSplatterLocation.position.x, bloodSplatterLocation.position.y, bloodSplatterLocation.position.z), Quaternion.identity);
+        Destroy(PS, 2f);
+        _hitReaction = false;
+        trigger.enabled = true;
     }
 }
