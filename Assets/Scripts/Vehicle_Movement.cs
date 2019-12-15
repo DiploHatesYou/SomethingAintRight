@@ -6,8 +6,11 @@ using TMPro;
 
 public class Vehicle_Movement : MonoBehaviour
 {
-	bool visualDebug = false;
+	bool visualDebug = true;
 	bool consoleDebug = true;
+
+	float checkAroundTimer;
+	float checkAroundDuration;
 
 	int vehicleID;
 
@@ -116,6 +119,8 @@ public class Vehicle_Movement : MonoBehaviour
 
 		//	----------------------------------------------------------------------------------
 
+		checkAroundTimer = city.GetComponent<Setup_Traffic>().checkAroundTimer;
+		checkAroundDuration = 0.0f;
 
 		//	Vehicle ID Assingment  -----------------------------------------------------------
 		vehicleID = city.GetComponent<Setup_Traffic>().getVehicheID();
@@ -291,14 +296,14 @@ public class Vehicle_Movement : MonoBehaviour
 		}
 		//	----------------------------------------------------------------------------------
 
-		
+
 
 		//	Wheel Rotation  ------------------------------------------------------------------
-		float wheelRotationAngle = distance * 360 / drivingCircumference;
-		for (int i = 0; i < Wheels.Count; i++)
-		{
-			Wheels[i].transform.Rotate(new Vector3(0, 1, 0), wheelRotationAngle * (drivingCircumference / wheelCircumference[i]));
-		}
+		//float wheelRotationAngle = distance * 360 / drivingCircumference;
+		//for (int i = 0; i < Wheels.Count; i++)
+		//{
+		//	Wheels[i].transform.Rotate(new Vector3(0, 1, 0), wheelRotationAngle * (drivingCircumference / wheelCircumference[i]));
+		//}
 		//	----------------------------------------------------------------------------------
 
 
@@ -318,7 +323,15 @@ public class Vehicle_Movement : MonoBehaviour
 
 	private void LateUpdate()
 	{
-		check_front();
+		checkAroundDuration += Time.deltaTime;
+		//if (checkAroundDuration >= checkAroundTimer)
+		//{
+		//	checkAroundDuration = 0;
+		//	check_front();
+		//}
+
+
+		//check_front();
 		//check_side('L');
 		//check_side('R');
 	}
@@ -422,7 +435,8 @@ public class Vehicle_Movement : MonoBehaviour
 			if (hit.collider.CompareTag("Red_Light_Sensor"))
 			{
 				//	WE ARE AT A RED LIGHT
-				Intersection = hit.collider.transform.root.gameObject;
+				//Intersection = hit.collider.transform.root.gameObject;
+				Intersection = hit.collider.transform.parent.parent.parent.gameObject;
 				//Debug.Log("AT THE RED LIGHT:   " + Intersection.name + "   /   " + this.gameObject.name);
 				Intersection.GetComponent<TrafficControl>().addToListOfVehiclesWaitingAtRedLight(this.gameObject);
 				atRedLight = true;
@@ -448,6 +462,7 @@ public class Vehicle_Movement : MonoBehaviour
 
 				//Debug.Log("HIT THE CAR INFRONT : " + hit.collider.gameObject.name);
 				GameObject vehicleHit = hit.collider.transform.parent.parent.gameObject;
+				float Vspeed = vehicleHit.GetComponent<Vehicle_Movement>().getVehicleSpeed();
 
 				//	Let's Check if the Vehiche We are Close to is At The Red Light
 				if (vehicleHit.GetComponent<Vehicle_Movement>().getAtRedLight())

@@ -26,6 +26,8 @@ public class Setup_Traffic : MonoBehaviour
 	private List<VehicleMetaData> trafficInfo = new List<VehicleMetaData>();
 
 	public int trafficDensity;
+	public float checkAroundTimer;
+
 
 	public GameObject myVehicle_1;
 	public GameObject myVehicle_2;
