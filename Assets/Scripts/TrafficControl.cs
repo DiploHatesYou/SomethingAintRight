@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TrafficControl : MonoBehaviour
 {
-	bool visualDebug = true;
+	bool visualDebug = false;
 
 	char currentLight;
 

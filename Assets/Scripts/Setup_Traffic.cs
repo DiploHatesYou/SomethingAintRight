@@ -43,8 +43,8 @@ public class Setup_Traffic : MonoBehaviour
 		{
 			Instantiate(myVehicle_1);
 			Instantiate(myVehicle_2);
-			//Instantiate(myVehicle_3);
-			//Instantiate(myVehicle_4);
+			Instantiate(myVehicle_3);
+			Instantiate(myVehicle_4);
 			Instantiate(myVehicle_5);
 		}
 	}

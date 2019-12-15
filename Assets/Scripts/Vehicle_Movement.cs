@@ -126,11 +126,11 @@ public class Vehicle_Movement : MonoBehaviour
 
 
 		//	Speed Assignment  ----------------------------------------------------------------
-		iniSpeed = UnityEngine.Random.Range(2.0f, 5.0f);
+		iniSpeed = UnityEngine.Random.Range(2.0f, 6.0f);
 		//iniSpeed = 10.0f;                                                    //**************************
+		//		if (vehicleID == 1) { iniSpeed = 5; } else { iniSpeed = 2; }
 		speed = iniSpeed;
 		//			speed = 10;
-		//		if (vehicleID == 1) { speed = 5; } else { speed = 2; }
 		//	----------------------------------------------------------------------------------
 
 
@@ -158,6 +158,7 @@ public class Vehicle_Movement : MonoBehaviour
 		laneCount = currentRoad.GetComponent<Road_Settings>().getLaneCount();
 		lane = UnityEngine.Random.Range(1, laneCount + 1);
 		//		if (vehicleID == 0) { lane = 4; } else { lane = 1; }	//**************************
+		//		lane = 2;
 		//	----------------------------------------------------------------------------------
 
 
@@ -211,7 +212,7 @@ public class Vehicle_Movement : MonoBehaviour
 			//float beginning = UnityEngine.Random.Range(2.0f, 300.0f);
 			float beginning = UnityEngine.Random.Range(2.0f, roadLength - 5.0f);
 			//		if (vehicleID == 1) { beginning = 5; } else { beginning = 30; }
-			//beginning = 10.0f;												  //**************************
+			//		beginning = 10.0f;												  //**************************
 
 			float rd = roadDirection.y;             //	Just to make it easier to read
 			vehicleStartPosition = new Vector3(
@@ -478,7 +479,7 @@ public class Vehicle_Movement : MonoBehaviour
 				//Debug.Log("   ► ► ►    VEHICLE ID: " + vehicleID + "\tSPEED: " + speed + " / " + iniSpeed + " \t\t " + timeSpentInLane + " / " + minTimeInLane);
 				if (speed < iniSpeed && timeSpentInLane > minTimeInLane && !atRedLight)
 				{
-					//Debug.Log("GOTTA CHANGE LANES !!!");
+					//Debug.Log("GOTTA CHANGE LANES !!!" + "   " + lane + "  /  " + laneCount);
 					if (lane == 1)
 					{
 						//	Has to be Left
@@ -546,6 +547,7 @@ public class Vehicle_Movement : MonoBehaviour
 
 		if ((dir == 'L' || dir == 'l'))
 		{
+			//Debug.Log("Trying to change LANE: [L]");
 			for (int i = 0; i < numberOfRays; i++)
 			{
 				float angle = i * rva / ((int)numberOfRays / 2) - rva;
@@ -566,10 +568,12 @@ public class Vehicle_Movement : MonoBehaviour
 
 		if ((dir == 'R' || dir == 'r'))
 		{
+			//Debug.Log("Trying to change LANE: [R]");
 			for (int i = 0; i < numberOfRays; i++)
 			{
 				float angle = i * rva / ((int)numberOfRays / 2) - rva;
-				rayDirection[i] = new Vector3((float)Math.Cos((roadDirection.y - 90 + angle) * Math.PI / 180), 0, -(float)Math.Sin((roadDirection.y + 90 - angle) * Math.PI / 180));
+				//rayDirection[i] = new Vector3((float)Math.Cos((roadDirection.y - 90 + angle) * Math.PI / 180), 0, -(float)Math.Sin((roadDirection.y + 90 - angle) * Math.PI / 180));
+				rayDirection[i] = new Vector3((float)Math.Cos((roadDirection.y + 90 + angle) * Math.PI / 180), 0, -(float)Math.Sin((roadDirection.y - 90 - angle) * Math.PI / 180));
 				rayLengthAngle[i] = rayLength / (float)Math.Cos(angle * Math.PI / 180);
 				if (visualDebug) { Debug.DrawRay(emitterRR.transform.position, rayDirection[i] * rayLengthAngle[i]); }
 				Ray ray_CheckRight = new Ray(emitterRR.transform.position, rayDirection[i]);
