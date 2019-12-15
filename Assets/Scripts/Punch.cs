@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
-//using UnityEngine.AI;
+using UnityEngine.AI;
+using UnityStandardAssets.Characters.ThirdPerson;
 
 public class Punch : MonoBehaviour
 {
@@ -23,7 +24,7 @@ public class Punch : MonoBehaviour
 
     public GameObject rayCaster;
 
-    //private NavMeshAgent _agent;
+    private NavMeshAgent _agent;
     private Animator _enemyAnim;
     private Animator _anim;
 
@@ -86,14 +87,42 @@ public class Punch : MonoBehaviour
 
            if (hit.collider.CompareTag("Enemy") && Input.GetMouseButtonDown(0))
            {
+                
+
                 if (hit.collider.CompareTag("Enemy") && Time.time > _nextHitTime && _oneClick == false)
                 {
                     beenHit = true;
                     Debug.Log("One Punch");
                     //StartCoroutine(HitReaction());
                     _nextHitTime = Time.time + _coolDown;
-                    _enemyAnim = hit.collider.GetComponent<Animator>();
-                    Enemy.TakeDamage(onePunchDamage);
+                    //_enemyAnim = hit.collider.GetComponent<Animator>();
+                    //Enemy.TakeDamage(onePunchDamage);
+                    hit.collider.gameObject.GetComponent<Enemy>().TakeDamage(onePunchDamage);
+
+                    Vector3 dir = hit.transform.position - transform.position;
+                    _agent = hit.collider.gameObject.GetComponent<NavMeshAgent>();
+                    Debug.Log("Hit Enemy");
+                    hit.collider.gameObject.GetComponent<AICharacterControl>().agent.updatePosition = false;
+                    hit.collider.gameObject.GetComponent<AICharacterControl>().agent.updateRotation = false;
+                    hit.rigidbody.AddForce(dir.normalized * thrust, ForceMode.Impulse);
+
+                    if (hit.rigidbody.velocity.z <= .2f && hit.rigidbody.velocity.x <= .2f && hit.rigidbody.velocity.y <= .2f)
+                    {
+                        Debug.Log("Velocity is 0");
+                        Vector3 enemyPos = hit.transform.position;
+                        _agent.Warp(enemyPos);
+                        _agent.GetComponent<AICharacterControl>().agent.updatePosition = true;
+                        _agent.GetComponent<AICharacterControl>().agent.updateRotation = true;
+                    }
+                    else if (Time.time >= _nextHitTime)
+                    {
+                        _agent.GetComponent<AICharacterControl>().agent.updatePosition = true;
+                        _agent.GetComponent<AICharacterControl>().agent.updateRotation = true;
+                    }
+
+                    //_agent = hit.collider.gameObject.GetComponent<NavMeshAgent>();
+                    //hit.collider.gameObject.GetComponent<AICharacterControl>().agent.updatePosition = false;
+                    //hit.collider.gameObject.GetComponent<AICharacterControl>().agent.updateRotation = false;
                 }
                 else
                 {
@@ -111,15 +140,15 @@ public class Punch : MonoBehaviour
         }
     }
 
-    public IEnumerator HitReaction()
-    {
-        yield return new WaitForSeconds(.1f);
-        _enemyAnim.SetBool("PunchingRight", false);
-        _enemyAnim.SetBool("DoublePunch", false);
-        _enemyAnim.SetBool("BeenHit", true);
-        var PS = Instantiate(bloodSplatter, new Vector3(bloodSplatterLocation.position.x, bloodSplatterLocation.position.y, bloodSplatterLocation.position.z), Quaternion.identity);
-        Destroy(PS, 2f);
-    }
+    //public IEnumerator HitReaction()
+    //{
+    //    yield return new WaitForSeconds(.1f);
+    //    _enemyAnim.SetBool("PunchingRight", false);
+    //    _enemyAnim.SetBool("DoublePunch", false);
+    //    _enemyAnim.SetBool("BeenHit", true);
+    //    var PS = Instantiate(bloodSplatter, new Vector3(bloodSplatterLocation.position.x, bloodSplatterLocation.position.y, bloodSplatterLocation.position.z), Quaternion.identity);
+    //    Destroy(PS, 2f);
+    //}
 
     void DoubleClick()
     {
