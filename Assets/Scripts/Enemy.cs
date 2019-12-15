@@ -28,11 +28,17 @@ public class Enemy : MonoBehaviour
     {
         Attack();
         DoDamage();
+
+
     }
 
     public void TakeDamage(float amount)
     {
         health -= amount;
+
+        _anim.SetBool("PunchingRight", false);
+        _anim.SetBool("DoublePunch", false);
+        _anim.SetBool("BeenHit", true);
 
         if (health <= 0)
         {
@@ -50,7 +56,7 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player") && Punch.beenHit == false)
+        if (other.CompareTag("Player"))
         {
             _attack = true;
             _doublePunch = true;
@@ -82,7 +88,7 @@ public class Enemy : MonoBehaviour
 
     public void DoDamage()
     {
-        int rand = Random.Range(0, 200);
+        int rand = Random.Range(0, 300);
         if (_attack == true && Pause.gameIsPaused == false)
         {
             if (rand == 1)
