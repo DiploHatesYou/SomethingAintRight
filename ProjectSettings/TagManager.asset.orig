@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Enemy
+  - Turn_Signal_Right
+  - Wheel
+  - Turn_Signal_Left
+  - Lane_1
+  - Lane_2
+  - Lane_3
+  - Lane_4
+  - Lane_5
+  - Lane_6
+  - Lane
+  - Road
+  - Lane_End
+  - Traffic_Light
+  - Red_Light_Sensor
+  - Intersection
+  - Direction
+  - Vehicle_Sensor_Right
+  - Vehicle_Sensor_Front
+  - Vehicle_Sensor_Back
+  - Vehicle_Sensor_Left
+  - DrivingWheel
+  - Vehicle
+<<<<<<< HEAD
+=======
+  - EnemyTarget
+>>>>>>> Tatum_Dev02
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - PostProcessing
+  - VehicleSensors
+  - RedLightSensor
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0

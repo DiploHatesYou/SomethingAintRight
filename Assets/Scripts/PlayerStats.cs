@@ -15,6 +15,7 @@ public class PlayerStats : MonoBehaviour
     public static int level = 0;
 
     public GameObject player;
+    Punch punchClass;
 
     Animator _anim;
 
@@ -24,6 +25,7 @@ public class PlayerStats : MonoBehaviour
         health = startHealth;
         xp = startXp;
         _anim = player.GetComponent<Animator>();
+        punchClass = player.GetComponent<Punch>();
     }
 
     private void Update()
@@ -53,7 +55,7 @@ public class PlayerStats : MonoBehaviour
         {
             xp = 0;
             level++;
-            Punch.onePunchDamage = Punch.onePunchDamage + .05f;
+            punchClass.onePunchDamage = punchClass.onePunchDamage + .05f;
         }
     }
 }
