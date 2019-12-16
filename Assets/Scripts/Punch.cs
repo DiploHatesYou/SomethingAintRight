@@ -106,19 +106,19 @@ public class Punch : MonoBehaviour
                     hit.collider.gameObject.GetComponent<AICharacterControl>().agent.updateRotation = false;
                     hit.rigidbody.AddForce(dir.normalized * thrust, ForceMode.Impulse);
 
-                    if (hit.rigidbody.velocity.z <= .2f && hit.rigidbody.velocity.x <= .2f && hit.rigidbody.velocity.y <= .2f)
-                    {
-                        Debug.Log("Velocity is 0");
-                        Vector3 enemyPos = hit.transform.position;
-                        _agent.Warp(enemyPos);
-                        _agent.GetComponent<AICharacterControl>().agent.updatePosition = true;
-                        _agent.GetComponent<AICharacterControl>().agent.updateRotation = true;
-                    }
-                    else if (Time.time >= _nextHitTime)
-                    {
-                        _agent.GetComponent<AICharacterControl>().agent.updatePosition = true;
-                        _agent.GetComponent<AICharacterControl>().agent.updateRotation = true;
-                    }
+                    //if (hit.rigidbody.velocity.z <= .1f && hit.rigidbody.velocity.x <= .1f && hit.rigidbody.velocity.y <= .1f)
+                    //{
+                    //    Debug.Log("Velocity is 0");
+                    //    Vector3 enemyPos = hit.transform.position;
+                    //    _agent.Warp(enemyPos);
+                    //    _agent.GetComponent<AICharacterControl>().agent.updatePosition = true;
+                    //    _agent.GetComponent<AICharacterControl>().agent.updateRotation = true;
+                    //}
+                    //else if (Time.time >= _nextHitTime)
+                    //{
+                    //    _agent.GetComponent<AICharacterControl>().agent.updatePosition = true;
+                    //    _agent.GetComponent<AICharacterControl>().agent.updateRotation = true;
+                    //}
 
                     //_agent = hit.collider.gameObject.GetComponent<NavMeshAgent>();
                     //hit.collider.gameObject.GetComponent<AICharacterControl>().agent.updatePosition = false;

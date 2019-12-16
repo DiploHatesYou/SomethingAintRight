@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5299201953715088819}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: BloodSplatLocation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -794,7 +794,7 @@ MonoBehaviour:
   m_JumpPower: 6
   m_GravityMultiplier: 2
   m_RunCycleLegOffset: 0.2
-  m_MoveSpeedMultiplier: 1
+  m_MoveSpeedMultiplier: 0.7
   m_AnimSpeedMultiplier: 1
   m_GroundCheckDistance: 0.3
 --- !u!114 &4775664258293739339
@@ -813,6 +813,11 @@ MonoBehaviour:
   worth: 50
   xpWorth: 25
   damage: 0.1
+  trigger: {fileID: 5299201954101593141}
+  bloodSplatter: {fileID: 5111045805561058591, guid: 780e12fe2a71e604db4d195a1458d4a4,
+    type: 3}
+  bloodSplatterLocation: {fileID: 5299201953715088819}
+  enemyAI: {fileID: 5299201954546534245}
 --- !u!135 &5299201954101593141
 SphereCollider:
   m_ObjectHideFlags: 0

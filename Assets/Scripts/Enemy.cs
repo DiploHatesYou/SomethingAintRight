@@ -26,17 +26,20 @@ public class Enemy : MonoBehaviour
     public Transform bloodSplatterLocation;
     private NavMeshAgent navAgent;
     public GameObject enemyAI;
-    public Transform spawnPoint;
+    private GameObject enemyTarget;
+    //public Transform spawnPoint;
 
     // Start is called before the first frame update
     void Start()
     {
+        enemyTarget = GameObject.Find("EnemyTarget");
         _anim = GetComponent<Animator>();
         _agent = GetComponent<AICharacterControl>();
         PlayerStats = FindObjectOfType<PlayerStats>();
         Punch = FindObjectOfType<Punch>();
         navAgent = GetComponent<NavMeshAgent>();
-        var _enemyAI = Instantiate(enemyAI, new Vector3(spawnPoint.position.x, spawnPoint.position.y, spawnPoint.position.z), Quaternion.identity);
+        _agent.target = enemyTarget.transform;
+        //var _enemyAI = Instantiate(enemyAI, new Vector3(spawnPoint.position.x, spawnPoint.position.y, spawnPoint.position.z), Quaternion.identity);
     }
 
     private void Update()
@@ -68,10 +71,11 @@ public class Enemy : MonoBehaviour
         
         PlayerStats.money += worth;
         _anim.SetBool("Death", true);
-        //navAgent.updatePosition = false;
-        //navAgent.updateRotation = false;
+        
 
         navAgent.isStopped = true;
+        _agent.agent.updatePosition = false;
+        _agent.agent.updatePosition = false;
         Destroy(enemyAI, 5f);
     }
 
@@ -125,7 +129,7 @@ public class Enemy : MonoBehaviour
 
     public void DoDamage()
     {
-        int rand = Random.Range(0, 250);
+        int rand = Random.Range(0, 200);
         if (_attack == true && Pause.gameIsPaused == false)
         {
             if (rand == 1)
@@ -148,5 +152,8 @@ public class Enemy : MonoBehaviour
         _hitReaction = false;
         yield return new WaitForSeconds(.3f);
         trigger.isTrigger = true;
+        navAgent.Warp(transform.position);
+        _agent.agent.updatePosition = true;
+        _agent.agent.updatePosition = true;
     }
 }
