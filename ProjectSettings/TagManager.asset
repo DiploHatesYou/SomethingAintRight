@@ -16,6 +16,17 @@ TagManager:
   - Lane_6
   - Lane
   - Road
+  - Lane_End
+  - Traffic_Light
+  - Red_Light_Sensor
+  - Intersection
+  - Direction
+  - Vehicle_Sensor_Right
+  - Vehicle_Sensor_Front
+  - Vehicle_Sensor_Back
+  - Vehicle_Sensor_Left
+  - DrivingWheel
+  - Vehicle
   layers:
   - Default
   - TransparentFX
@@ -26,8 +37,8 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - 
-  - 
+  - VehicleSensors
+  - RedLightSensor
   - 
   - 
   - 
