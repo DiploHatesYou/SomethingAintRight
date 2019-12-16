@@ -44,10 +44,10 @@ public class Setup_Traffic : MonoBehaviour
 		for (int i = 0; i < trafficDensity; i++)
 		{
 			Instantiate(myVehicle_1);
-			Instantiate(myVehicle_2);
-			Instantiate(myVehicle_3);
-			Instantiate(myVehicle_4);
-			Instantiate(myVehicle_5);
+			//Instantiate(myVehicle_2);
+			//Instantiate(myVehicle_3);
+			//Instantiate(myVehicle_4);
+			//Instantiate(myVehicle_5);
 		}
 	}
 

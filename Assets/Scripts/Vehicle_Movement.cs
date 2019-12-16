@@ -6,7 +6,7 @@ using TMPro;
 
 public class Vehicle_Movement : MonoBehaviour
 {
-	bool visualDebug = true;
+	bool visualDebug = false;
 	bool consoleDebug = true;
 
 	float checkAroundTimer;
@@ -126,6 +126,8 @@ public class Vehicle_Movement : MonoBehaviour
 		vehicleID = city.GetComponent<Setup_Traffic>().getVehicheID();
 		city.GetComponent<Setup_Traffic>().setVehicleID(vehicleID + 1);
 		transform.Find("Vehicle_ID").GetComponent<TextMeshPro>().text = vehicleID.ToString();
+
+		if (visualDebug) { transform.Find("Vehicle_ID").GetComponent<Renderer>().enabled = true; } else { transform.Find("Vehicle_ID").GetComponent<Renderer>().enabled = false; }
 		//	----------------------------------------------------------------------------------
 
 
@@ -299,11 +301,12 @@ public class Vehicle_Movement : MonoBehaviour
 
 
 		//	Wheel Rotation  ------------------------------------------------------------------
-		//float wheelRotationAngle = distance * 360 / drivingCircumference;
-		//for (int i = 0; i < Wheels.Count; i++)
-		//{
-		//	Wheels[i].transform.Rotate(new Vector3(0, 1, 0), wheelRotationAngle * (drivingCircumference / wheelCircumference[i]));
-		//}
+		float wheelRotationAngle = distance * 360 / drivingCircumference;
+		for (int i = 0; i < Wheels.Count; i++)
+		{
+			Wheels[i].transform.Rotate(new Vector3(0, 1, 0), wheelRotationAngle * (drivingCircumference / wheelCircumference[i]));
+			//Wheels[i].transform.Rotate(new Vector3(0, 1, 0), 20);
+		}
 		//	----------------------------------------------------------------------------------
 
 
@@ -316,7 +319,7 @@ public class Vehicle_Movement : MonoBehaviour
 
 
 
-		//check_front();
+		//	check_front();
 		//check_side('L');
 		//check_side('R');
 	}
@@ -331,7 +334,7 @@ public class Vehicle_Movement : MonoBehaviour
 		//}
 
 
-		//check_front();
+		check_front();
 		//check_side('L');
 		//check_side('R');
 	}
@@ -617,7 +620,7 @@ public class Vehicle_Movement : MonoBehaviour
 		{
 			//	Vehicle Passed te Red Light and Entered the Intersection
 			//	Needs to clear the intersection
-			Debug.Log("    ► ► ►  VEHICLE ENTERED THE INTERSECTION AT RED");
+			Debug.Log("    ► ► ►  VEHICLE ENTERED THE INTERSECTION ON RED");
 			atRedLight = false;
 		}
 	}
