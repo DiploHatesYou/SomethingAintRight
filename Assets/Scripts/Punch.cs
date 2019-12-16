@@ -8,8 +8,9 @@ public class Punch : MonoBehaviour
     float _coolDown = 1f;
     float _nextHitTime = 0;
 
-    public static float onePunchDamage = .1f;
-    public static float doublePunchDamage = .2f;
+    public float onePunchDamage = .1f;
+    public float doublePunchDamage = .2f;
+
     public float thrust;
 
     bool _oneClick = false;
