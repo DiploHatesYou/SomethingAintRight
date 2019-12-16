@@ -13,8 +13,14 @@ public class PlayerStats : MonoBehaviour
     public int startXp = 0;
 
     public static int level = 0;
+    public static int nextLevelXP = 100;
+
+    private bool _dead = false;
 
     public GameObject player;
+    private GameObject cam;
+    public GameObject deadScreenUI;
+
     Punch punchClass;
 
     Animator _anim;
@@ -26,6 +32,7 @@ public class PlayerStats : MonoBehaviour
         xp = startXp;
         _anim = player.GetComponent<Animator>();
         punchClass = player.GetComponent<Punch>();
+        cam = GameObject.FindGameObjectWithTag("MainCamera");
     }
 
     private void Update()
@@ -40,22 +47,33 @@ public class PlayerStats : MonoBehaviour
         if (health <= 0)
         {
             Die();
+            _dead = true;
         }
     }
 
     void Die()
     {
         _anim.SetBool("Death", true);
-        //Load death screen
+        
+        if (_dead == true)
+        {
+            deadScreenUI.SetActive(true);
+            Time.timeScale = 0f;
+            Cursor.visible = true;
+            cam.GetComponent<MouseOrbit>().enabled = false;
+            Cursor.lockState = CursorLockMode.None;
+        }
+
     }
 
     void LevelUp()
     {
-        if (xp == 100)
+        if (xp == nextLevelXP)
         {
             xp = 0;
             level++;
             punchClass.onePunchDamage = punchClass.onePunchDamage + .05f;
+            nextLevelXP += 25;
         }
     }
 }

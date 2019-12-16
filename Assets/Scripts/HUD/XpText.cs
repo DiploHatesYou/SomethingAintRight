@@ -14,6 +14,6 @@ public class XpText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _xpText.text = "XP - " + PlayerStats.xp.ToString() + "/100" + " Level - " + PlayerStats.level.ToString();
+        _xpText.text = "XP - " + PlayerStats.xp.ToString() + " /" + PlayerStats.nextLevelXP.ToString() + " Level - " + PlayerStats.level.ToString();
     }
 }
