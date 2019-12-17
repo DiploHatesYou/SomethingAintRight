@@ -18,7 +18,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 		Rigidbody m_Rigidbody;
 		Animator m_Animator;
-		bool m_IsGrounded;
+		public bool m_IsGrounded;
 		float m_OrigGroundCheckDistance;
 		const float k_Half = 0.5f;
 		float m_TurnAmount;
@@ -28,6 +28,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		Vector3 m_CapsuleCenter;
 		CapsuleCollider m_Capsule;
 		bool m_Crouching;
+        public bool moving = false;
 
 
 		void Start()

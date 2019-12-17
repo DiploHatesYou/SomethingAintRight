@@ -64,7 +64,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             }
 #if !MOBILE_INPUT
 			// walk speed multiplier
-	        if (Input.GetKey(KeyCode.LeftShift)) m_Move *= 2f;
+	        if (Input.GetKey(KeyCode.LeftShift)) m_Move *= 10f;
 #endif
 
             // pass all parameters to the character control script
