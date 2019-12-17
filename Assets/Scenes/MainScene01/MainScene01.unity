@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.1357679, g: 0.1496805, b: 0.16221637, a: 1}
+  m_IndirectSpecularColor: {r: 0.13559267, g: 0.14969161, b: 0.16211069, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -119,6 +119,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2506978246677480685, guid: 97bd19a66ec857b4daaf5eca762d93cc,
+        type: 3}
+      propertyPath: m_Name
+      value: Metal Pole (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506978246677480685, guid: 97bd19a66ec857b4daaf5eca762d93cc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1339447923408698945, guid: 97bd19a66ec857b4daaf5eca762d93cc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -174,16 +184,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2506978246677480685, guid: 97bd19a66ec857b4daaf5eca762d93cc,
-        type: 3}
-      propertyPath: m_Name
-      value: Metal Pole (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506978246677480685, guid: 97bd19a66ec857b4daaf5eca762d93cc,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97bd19a66ec857b4daaf5eca762d93cc, type: 3}
 --- !u!1001 &141319695
@@ -202,6 +202,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3403978743494614952, guid: 91b42bc6212b517419ece44f15d942b3,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3403978743494614954, guid: 91b42bc6212b517419ece44f15d942b3,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3403978743494614964, guid: 91b42bc6212b517419ece44f15d942b3,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7563422848552461172, guid: 91b42bc6212b517419ece44f15d942b3,
         type: 3}
@@ -258,22 +273,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3403978743494614954, guid: 91b42bc6212b517419ece44f15d942b3,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7563422849841271076, guid: 91b42bc6212b517419ece44f15d942b3,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3403978743494614964, guid: 91b42bc6212b517419ece44f15d942b3,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3403978743494614952, guid: 91b42bc6212b517419ece44f15d942b3,
         type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -967,6 +967,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2506978246677480685, guid: 97bd19a66ec857b4daaf5eca762d93cc,
+        type: 3}
+      propertyPath: m_Name
+      value: Metal Pole (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506978246677480685, guid: 97bd19a66ec857b4daaf5eca762d93cc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1339447923408698945, guid: 97bd19a66ec857b4daaf5eca762d93cc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1022,16 +1032,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2506978246677480685, guid: 97bd19a66ec857b4daaf5eca762d93cc,
-        type: 3}
-      propertyPath: m_Name
-      value: Metal Pole (9)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506978246677480685, guid: 97bd19a66ec857b4daaf5eca762d93cc,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97bd19a66ec857b4daaf5eca762d93cc, type: 3}
 --- !u!1 &524964177 stripped
@@ -1053,6 +1053,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2506978246677480685, guid: 97bd19a66ec857b4daaf5eca762d93cc,
+        type: 3}
+      propertyPath: m_Name
+      value: Metal Pole (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506978246677480685, guid: 97bd19a66ec857b4daaf5eca762d93cc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1339447923408698945, guid: 97bd19a66ec857b4daaf5eca762d93cc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1106,16 +1116,6 @@ PrefabInstance:
     - target: {fileID: 1339447923408698945, guid: 97bd19a66ec857b4daaf5eca762d93cc,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506978246677480685, guid: 97bd19a66ec857b4daaf5eca762d93cc,
-        type: 3}
-      propertyPath: m_Name
-      value: Metal Pole (7)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506978246677480685, guid: 97bd19a66ec857b4daaf5eca762d93cc,
-        type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1488,6 +1488,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2506978246677480685, guid: 97bd19a66ec857b4daaf5eca762d93cc,
+        type: 3}
+      propertyPath: m_Name
+      value: Metal Pole (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506978246677480685, guid: 97bd19a66ec857b4daaf5eca762d93cc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1339447923408698945, guid: 97bd19a66ec857b4daaf5eca762d93cc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1541,16 +1551,6 @@ PrefabInstance:
     - target: {fileID: 1339447923408698945, guid: 97bd19a66ec857b4daaf5eca762d93cc,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506978246677480685, guid: 97bd19a66ec857b4daaf5eca762d93cc,
-        type: 3}
-      propertyPath: m_Name
-      value: Metal Pole (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506978246677480685, guid: 97bd19a66ec857b4daaf5eca762d93cc,
-        type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1688,6 +1688,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2506978246677480685, guid: 97bd19a66ec857b4daaf5eca762d93cc,
+        type: 3}
+      propertyPath: m_Name
+      value: Metal Pole (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506978246677480685, guid: 97bd19a66ec857b4daaf5eca762d93cc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1339447923408698945, guid: 97bd19a66ec857b4daaf5eca762d93cc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1741,16 +1751,6 @@ PrefabInstance:
     - target: {fileID: 1339447923408698945, guid: 97bd19a66ec857b4daaf5eca762d93cc,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506978246677480685, guid: 97bd19a66ec857b4daaf5eca762d93cc,
-        type: 3}
-      propertyPath: m_Name
-      value: Metal Pole (4)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506978246677480685, guid: 97bd19a66ec857b4daaf5eca762d93cc,
-        type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1833,21 +1833,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1353855183237158910, guid: efeadcabff0b09c459e7fa94c96d5c2e,
-        type: 3}
-      propertyPath: m_MoveSpeedMultiplier
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1353855183237158910, guid: efeadcabff0b09c459e7fa94c96d5c2e,
-        type: 3}
-      propertyPath: m_GroundCheckDistance
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1353855183237158910, guid: efeadcabff0b09c459e7fa94c96d5c2e,
-        type: 3}
-      propertyPath: m_AnimSpeedMultiplier
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1353855183567678238, guid: efeadcabff0b09c459e7fa94c96d5c2e,
         type: 3}
       propertyPath: thrust
@@ -1863,21 +1848,51 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8237753022950862569, guid: efeadcabff0b09c459e7fa94c96d5c2e,
+    - target: {fileID: 2565971638509438070, guid: efeadcabff0b09c459e7fa94c96d5c2e,
         type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.19
+      propertyPath: m_RootOrder
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 301075083111749962, guid: efeadcabff0b09c459e7fa94c96d5c2e,
         type: 3}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 24147762821496835, guid: efeadcabff0b09c459e7fa94c96d5c2e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5905481206442062299, guid: efeadcabff0b09c459e7fa94c96d5c2e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1353855183235399674, guid: efeadcabff0b09c459e7fa94c96d5c2e,
         type: 3}
       propertyPath: m_Avatar
       value: 
       objectReference: {fileID: 9000000, guid: 26e83b9a9b4cec44f998ad5a2a0ce0fd, type: 3}
+    - target: {fileID: 1353855183237158910, guid: efeadcabff0b09c459e7fa94c96d5c2e,
+        type: 3}
+      propertyPath: m_MoveSpeedMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1353855183237158910, guid: efeadcabff0b09c459e7fa94c96d5c2e,
+        type: 3}
+      propertyPath: m_GroundCheckDistance
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1353855183237158910, guid: efeadcabff0b09c459e7fa94c96d5c2e,
+        type: 3}
+      propertyPath: m_AnimSpeedMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8237753022950862569, guid: efeadcabff0b09c459e7fa94c96d5c2e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.19
+      objectReference: {fileID: 0}
     - target: {fileID: 8237753022951027401, guid: efeadcabff0b09c459e7fa94c96d5c2e,
         type: 3}
       propertyPath: m_IsActive
@@ -1888,25 +1903,15 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 24147762821496835, guid: efeadcabff0b09c459e7fa94c96d5c2e,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2565971638509438070, guid: efeadcabff0b09c459e7fa94c96d5c2e,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 8932075743089134876, guid: efeadcabff0b09c459e7fa94c96d5c2e,
         type: 3}
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 5905481206442062299, guid: efeadcabff0b09c459e7fa94c96d5c2e,
+    - target: {fileID: 2565971638516706196, guid: efeadcabff0b09c459e7fa94c96d5c2e,
         type: 3}
-      propertyPath: m_RootOrder
-      value: 4
+      propertyPath: m_UpdateMode
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: efeadcabff0b09c459e7fa94c96d5c2e, type: 3}
@@ -1917,6 +1922,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2506978246677480685, guid: 97bd19a66ec857b4daaf5eca762d93cc,
+        type: 3}
+      propertyPath: m_Name
+      value: Metal Pole (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506978246677480685, guid: 97bd19a66ec857b4daaf5eca762d93cc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1339447923408698945, guid: 97bd19a66ec857b4daaf5eca762d93cc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1972,16 +1987,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2506978246677480685, guid: 97bd19a66ec857b4daaf5eca762d93cc,
-        type: 3}
-      propertyPath: m_Name
-      value: Metal Pole (10)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506978246677480685, guid: 97bd19a66ec857b4daaf5eca762d93cc,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97bd19a66ec857b4daaf5eca762d93cc, type: 3}
 --- !u!1001 &1439244844
@@ -1991,6 +1996,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2506978246677480685, guid: 97bd19a66ec857b4daaf5eca762d93cc,
+        type: 3}
+      propertyPath: m_Name
+      value: Metal Pole
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506978246677480685, guid: 97bd19a66ec857b4daaf5eca762d93cc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1339447923408698945, guid: 97bd19a66ec857b4daaf5eca762d93cc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2044,16 +2059,6 @@ PrefabInstance:
     - target: {fileID: 1339447923408698945, guid: 97bd19a66ec857b4daaf5eca762d93cc,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506978246677480685, guid: 97bd19a66ec857b4daaf5eca762d93cc,
-        type: 3}
-      propertyPath: m_Name
-      value: Metal Pole
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506978246677480685, guid: 97bd19a66ec857b4daaf5eca762d93cc,
-        type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2139,6 +2144,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2506978246677480685, guid: 97bd19a66ec857b4daaf5eca762d93cc,
+        type: 3}
+      propertyPath: m_Name
+      value: Metal Pole (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506978246677480685, guid: 97bd19a66ec857b4daaf5eca762d93cc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1339447923408698945, guid: 97bd19a66ec857b4daaf5eca762d93cc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2192,16 +2207,6 @@ PrefabInstance:
     - target: {fileID: 1339447923408698945, guid: 97bd19a66ec857b4daaf5eca762d93cc,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506978246677480685, guid: 97bd19a66ec857b4daaf5eca762d93cc,
-        type: 3}
-      propertyPath: m_Name
-      value: Metal Pole (11)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506978246677480685, guid: 97bd19a66ec857b4daaf5eca762d93cc,
-        type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2317,6 +2322,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2506978246677480685, guid: 97bd19a66ec857b4daaf5eca762d93cc,
+        type: 3}
+      propertyPath: m_Name
+      value: Metal Pole (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506978246677480685, guid: 97bd19a66ec857b4daaf5eca762d93cc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1339447923408698945, guid: 97bd19a66ec857b4daaf5eca762d93cc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2370,16 +2385,6 @@ PrefabInstance:
     - target: {fileID: 1339447923408698945, guid: 97bd19a66ec857b4daaf5eca762d93cc,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506978246677480685, guid: 97bd19a66ec857b4daaf5eca762d93cc,
-        type: 3}
-      propertyPath: m_Name
-      value: Metal Pole (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506978246677480685, guid: 97bd19a66ec857b4daaf5eca762d93cc,
-        type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2490,6 +2495,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2506978246677480685, guid: 97bd19a66ec857b4daaf5eca762d93cc,
+        type: 3}
+      propertyPath: m_Name
+      value: Metal Pole (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506978246677480685, guid: 97bd19a66ec857b4daaf5eca762d93cc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1339447923408698945, guid: 97bd19a66ec857b4daaf5eca762d93cc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2545,16 +2560,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2506978246677480685, guid: 97bd19a66ec857b4daaf5eca762d93cc,
-        type: 3}
-      propertyPath: m_Name
-      value: Metal Pole (6)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506978246677480685, guid: 97bd19a66ec857b4daaf5eca762d93cc,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97bd19a66ec857b4daaf5eca762d93cc, type: 3}
 --- !u!1001 &1938874289
@@ -2564,6 +2569,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2506978246677480685, guid: 97bd19a66ec857b4daaf5eca762d93cc,
+        type: 3}
+      propertyPath: m_Name
+      value: Metal Pole (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506978246677480685, guid: 97bd19a66ec857b4daaf5eca762d93cc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1339447923408698945, guid: 97bd19a66ec857b4daaf5eca762d93cc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2619,16 +2634,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2506978246677480685, guid: 97bd19a66ec857b4daaf5eca762d93cc,
-        type: 3}
-      propertyPath: m_Name
-      value: Metal Pole (8)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506978246677480685, guid: 97bd19a66ec857b4daaf5eca762d93cc,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97bd19a66ec857b4daaf5eca762d93cc, type: 3}
 --- !u!1001 &1960620104
@@ -2638,6 +2643,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2506978246677480685, guid: 97bd19a66ec857b4daaf5eca762d93cc,
+        type: 3}
+      propertyPath: m_Name
+      value: Metal Pole (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506978246677480685, guid: 97bd19a66ec857b4daaf5eca762d93cc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1339447923408698945, guid: 97bd19a66ec857b4daaf5eca762d93cc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2693,16 +2708,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2506978246677480685, guid: 97bd19a66ec857b4daaf5eca762d93cc,
-        type: 3}
-      propertyPath: m_Name
-      value: Metal Pole (5)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506978246677480685, guid: 97bd19a66ec857b4daaf5eca762d93cc,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97bd19a66ec857b4daaf5eca762d93cc, type: 3}
 --- !u!4 &1962589026 stripped
@@ -2718,6 +2723,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2506978246677480685, guid: 97bd19a66ec857b4daaf5eca762d93cc,
+        type: 3}
+      propertyPath: m_Name
+      value: Metal Pole (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506978246677480685, guid: 97bd19a66ec857b4daaf5eca762d93cc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1339447923408698945, guid: 97bd19a66ec857b4daaf5eca762d93cc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2771,16 +2786,6 @@ PrefabInstance:
     - target: {fileID: 1339447923408698945, guid: 97bd19a66ec857b4daaf5eca762d93cc,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506978246677480685, guid: 97bd19a66ec857b4daaf5eca762d93cc,
-        type: 3}
-      propertyPath: m_Name
-      value: Metal Pole (12)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506978246677480685, guid: 97bd19a66ec857b4daaf5eca762d93cc,
-        type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -13724,6 +13729,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2658408087595628963, guid: 072ed3b73e80dd7479e5bd5f04edb738,
+        type: 3}
+      propertyPath: distanceMin
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2658408087595628967, guid: 072ed3b73e80dd7479e5bd5f04edb738,
+        type: 3}
+      propertyPath: far clip plane
+      value: 350
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 072ed3b73e80dd7479e5bd5f04edb738, type: 3}
