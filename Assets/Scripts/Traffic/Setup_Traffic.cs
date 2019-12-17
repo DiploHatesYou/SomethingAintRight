@@ -34,6 +34,10 @@ public class Setup_Traffic : MonoBehaviour
 	public GameObject myVehicle_3;
 	public GameObject myVehicle_4;
 	public GameObject myVehicle_5;
+	public GameObject myVehicle_6;
+	public GameObject myVehicle_7;
+	public GameObject myVehicle_8;
+	public GameObject myVehicle_9;
 
 	private int vehicleID;
 
@@ -43,11 +47,15 @@ public class Setup_Traffic : MonoBehaviour
 
 		for (int i = 0; i < trafficDensity; i++)
 		{
-			Instantiate(myVehicle_1);
-			Instantiate(myVehicle_2);
-			Instantiate(myVehicle_3);
-			Instantiate(myVehicle_4);
+			//Instantiate(myVehicle_1);
+			//Instantiate(myVehicle_2);
+			//Instantiate(myVehicle_3);
+			//Instantiate(myVehicle_4);
 			Instantiate(myVehicle_5);
+			Instantiate(myVehicle_6);
+			Instantiate(myVehicle_7);
+			Instantiate(myVehicle_8);
+			Instantiate(myVehicle_9);
 		}
 	}
 

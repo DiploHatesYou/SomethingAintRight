@@ -132,7 +132,7 @@ public class Vehicle_Movement : MonoBehaviour
 
 
 		//	Speed Assignment  ----------------------------------------------------------------
-		iniSpeed = UnityEngine.Random.Range(2.0f, 6.0f);
+		iniSpeed = UnityEngine.Random.Range(8.0f, 20.0f);
 		//iniSpeed = 10.0f;                                                    //**************************
 		//		if (vehicleID == 1) { iniSpeed = 5; } else { iniSpeed = 2; }
 		speed = iniSpeed;
@@ -300,11 +300,11 @@ public class Vehicle_Movement : MonoBehaviour
 
 
 		//	Wheel Rotation  ------------------------------------------------------------------
-		float wheelRotationAngle = distance * 360 / drivingCircumference;
-		for (int i = 0; i < Wheels.Count; i++)
-		{
-			Wheels[i].transform.Rotate(new Vector3(0, 1, 0), wheelRotationAngle * (drivingCircumference / wheelCircumference[i]));
-		}
+		//float wheelRotationAngle = distance * 360 / drivingCircumference;
+		//for (int i = 0; i < Wheels.Count; i++)
+		//{
+		//	Wheels[i].transform.Rotate(new Vector3(0, 1, 0), wheelRotationAngle * (drivingCircumference / wheelCircumference[i]));
+		//}
 		//	----------------------------------------------------------------------------------
 
 
