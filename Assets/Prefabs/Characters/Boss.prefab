@@ -1131,6 +1131,8 @@ MonoBehaviour:
   m_MoveSpeedMultiplier: 0.7
   m_AnimSpeedMultiplier: 1
   m_GroundCheckDistance: 0.3
+  m_IsGrounded: 0
+  moving: 0
 --- !u!114 &1735774373173899842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1146,7 +1148,7 @@ MonoBehaviour:
   health: 1
   worth: 50
   xpWorth: 25
-  damage: 0.1
+  damage: 0.2
   trigger: {fileID: 1430641470769535292}
   bloodSplatter: {fileID: 5111045805561058591, guid: 780e12fe2a71e604db4d195a1458d4a4,
     type: 3}
