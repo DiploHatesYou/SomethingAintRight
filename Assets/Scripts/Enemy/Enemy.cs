@@ -129,7 +129,7 @@ public class Enemy : MonoBehaviour
 
     public void DoDamage()
     {
-        int rand = Random.Range(0, 200);
+        int rand = Random.Range(0, 100);
         if (_attack == true && Pause.gameIsPaused == false)
         {
             if (rand == 1)

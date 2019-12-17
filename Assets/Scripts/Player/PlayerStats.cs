@@ -62,6 +62,7 @@ public class PlayerStats : MonoBehaviour
             Cursor.visible = true;
             cam.GetComponent<MouseOrbit>().enabled = false;
             Cursor.lockState = CursorLockMode.None;
+            Pause.gameIsPaused = true;
         }
 
     }

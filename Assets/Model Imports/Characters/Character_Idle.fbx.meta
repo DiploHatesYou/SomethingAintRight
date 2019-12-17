@@ -64,7 +64,17 @@ ModelImporter:
     9500000: //RootNode
     13700000: Character
     2186277476908879412: ImportLogs
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Character
+    second: {fileID: 2100000, guid: 56c93a59e0023a04fb37609860f23af1, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Face
+    second: {fileID: 2800000, guid: b5d1a2c28753c2c46a90b469761a255b, type: 3}
   materials:
     importMaterials: 1
     materialName: 0
