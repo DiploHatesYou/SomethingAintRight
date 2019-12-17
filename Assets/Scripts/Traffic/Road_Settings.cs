@@ -24,7 +24,16 @@ public class Road_Settings : MonoBehaviour
 			{
 				Lanes.Add(child.gameObject);
 				laneCount++;
+
+				foreach(Transform grandChild in child.transform)
+				{
+					if (grandChild.tag == "Lane_End")
+					{
+						grandChild.GetComponent<Renderer>().enabled = false;
+					}
+				}
 			}
+
 		}
 		//Debug.Log("Lane Count: " + laneCount);
 
